@@ -1,1 +1,56 @@
-<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Projects — Edson Gao</title> <link rel="stylesheet" href="assets/styles.css"> </head> <body> <header class="header"> <div style="font-weight:800;"><a href="index.html">Edson Gao</a></div> <nav class="nav"> <a href="projects.html">My Projects</a> </nav> </header> <section class="container"> <h1 class="page-title">Projects</h1> <p class="page-subtitle">Explore by category.</p> <div class="grid" style="margin-top:18px;"> <a class="card" href="pcb/index.html"> <h3>PCB Design</h3> <p>Analog frontends, power, CAN, assembly, validation.</p> </a> <a class="card" href="asic/index.html"> <h3>ASIC Design</h3> <p>SPI controller in Verilog, simulation, and verification.</p> </a> <a class="card" href="automation/index.html"> <h3>Industrial Automation</h3> <p>Factory I/O lines, PLC FSMs, ladder logic, PID.</p> </a> </div> </section> <footer class="footer">© <span id="year"></span> Edson Gao</footer> <script>document.getElementById('year').textContent = new Date().getFullYear();</script> </body> </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Edson Gao</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div style="font-weight:800;">
+      <a href="index.html">Edson Gao</a>
+    </div>
+    <nav class="nav">
+      <a href="projects.html">My Projects</a>
+    </nav>
+  </header>
+
+  <!-- Page Intro -->
+  <section class="container">
+    <h1 class="page-title">Projects</h1>
+    <p class="page-subtitle">Explore by category.</p>
+
+    <!-- Project Categories -->
+    <div class="grid" style="margin-top:18px;">
+      <a class="card" href="pcb/index.html">
+        <h3>PCB Design</h3>
+        <p>Analog frontends, power, CAN, assembly, validation.</p>
+      </a>
+      <a class="card" href="asic/index.html">
+        <h3>ASIC Design</h3>
+        <p>SPI controller in Verilog, simulation, and verification.</p>
+      </a>
+      <a class="card" href="automation/index.html">
+        <h3>Industrial Automation</h3>
+        <p>Factory I/O lines, PLC FSMs, ladder logic, PID.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © <span id="year"></span> Edson Gao
+  </footer>
+
+  <!-- Script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
