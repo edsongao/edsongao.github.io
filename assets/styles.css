@@ -55,3 +55,72 @@ display: flex; align-items: center; justify-content: center; color: #64748b; bac
 .title { font-size: 40px; }
 .proj { grid-template-columns: 1fr; }
 }
+
+/* Gallery (modal lightbox) */
+.gallery-modal {
+  position: fixed; inset: 0; background: rgba(15,23,42,0.75);
+  display: none; align-items: center; justify-content: center; z-index: 1000;
+}
+.gallery-modal.open { display: flex; }
+.gallery-inner {
+  width: min(92vw, 1000px); max-height: 92vh;
+  background: #fff; border-radius: 12px; overflow: hidden; display: grid;
+  grid-template-rows: auto 1fr auto; box-shadow: 0 20px 60px rgba(2,6,23,0.35);
+}
+.gallery-header, .gallery-footer {
+  padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+.gallery-header { border-bottom: 1px solid #e5e7eb; }
+.gallery-footer { border-top: 1px solid #e5e7eb; color: #334155; font-size: 14px; }
+.gallery-title { font-weight: 700; font-size: 16px; }
+.gallery-close {
+  border: none; background: transparent; font-size: 22px; line-height: 1; cursor: pointer; padding: 6px; border-radius: 8px;
+}
+.gallery-close:hover { background: #f1f5f9; }
+
+.gallery-body { position: relative; display: grid; grid-template-columns: 52px 1fr 52px; align-items: center; gap: 8px; padding: 8px; }
+.gallery-arrow {
+  width: 44px; height: 44px; border-radius: 999px; border: 1px solid #e5e7eb;
+  background: #fff; display: grid; place-items: center; font-size: 18px; cursor: pointer;
+}
+.gallery-arrow:hover { background: #f8fafc; }
+
+.gallery-figure { width: 100%; height: 64vh; min-height: 300px; display: grid; grid-template-rows: 1fr auto; gap: 8px; }
+.gallery-figure img {
+  width: 100%; height: 100%; object-fit: contain; background: #f8fafc;
+  border: 1px solid #e5e7eb; border-radius: 10px;
+}
+.gallery-caption {
+  font-size: 13px; color: #475569; padding: 0 4px 6px; text-align: left; line-height: 1.35;
+}
+
+.gallery-pager { font-size: 12px; color: #64748b; }
+.gallery-thumbs {
+  display: grid; grid-auto-flow: column; gap: 8px; overflow-x: auto; padding: 6px 14px 12px; border-top: 1px solid #e5e7eb;
+}
+.gallery-thumb {
+  width: 72px; height: 56px; border: 1px solid #e5e7eb; border-radius: 6px; overflow: hidden; cursor: pointer; opacity: 0.8; flex: 0 0 auto;
+}
+.gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-thumb.active { outline: 2px solid #0ea5e9; opacity: 1; }
+
+/* Clickable stack/cover on project cards */
+.gallery-cover {
+  position: relative; cursor: pointer;
+}
+.gallery-cover .stack {
+  position: relative; height: 180px; border: 1px solid #e5e7eb; border-radius: 10px; background: #f8fafc; overflow: hidden;
+}
+.gallery-cover .stack::before,
+.gallery-cover .stack::after {
+  content: ""; position: absolute; inset: 0; border: 1px solid #e5e7eb; border-radius: 10px; background: #f8fafc;
+  transform: translate(8px, 8px); z-index: -2;
+}
+.gallery-cover .stack::after { transform: translate(4px, 4px); z-index: -1; }
+.gallery-cover img { width: 100%; height: 100%; object-fit: cover; }
+
+.gallery-cover .hint {
+  position: absolute; right: 10px; bottom: 10px; background: rgba(15,23,42,0.72); color: #fff; font-size: 12px;
+  padding: 6px 8px; border-radius: 8px;
+}
+
