@@ -78,6 +78,8 @@
   document.querySelectorAll('.gallery-cover').forEach(Portfolio.bindGalleryFromElement);
 </script>
 
+  <script> window.addEventListener('DOMContentLoaded', function() { if (window.Portfolio && Portfolio.bindGalleryFromElement) { document.querySelectorAll('.gallery-cover').forEach(Portfolio.bindGalleryFromElement); } else { console.error('Portfolio not available — check assets/script.js and ensure it ends with })();'); } }); </script>
+
 
 </body>
 </html>
