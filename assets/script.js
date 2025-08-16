@@ -18,7 +18,8 @@ el.outerHTML = '<img src="' + src + '" alt="' + (alt || 'project image') + '">';
 }
 }
 
-window.Portfolio = { setProjectImage };
+window.Portfolio = window.Portfolio || {};
+window.Portfolio.setProjectImage = setProjectImage;
 
 // ----- Simple Gallery (no deps) -----
 (function() {
