@@ -33,23 +33,33 @@
   <main class="section container">
 
     <!-- UWASIC SPI Controller -->
-    <article class="proj">
-      <div class="figure">
-        <div id="img-spi" class="placeholder">
-          Add later: Portfolio.setProjectImage('img-spi', '../images/spi-controller.jpg', 'SPI Controller')
-        </div>
+   <article class="proj">
+  <div class="figure">
+    <div class="gallery-cover" data-gallery="gallery-spi" data-title="UWASIC SPI Controller">
+      <div class="stack">
+        <img src="../images/spi_cover.jpg" alt="SPI cover">
       </div>
-      <div>
-        <h2>UWASIC — SPI Controller (Verilog)</h2>
-        <div class="meta">MOSI/MISO wiring, CPOL/CPHA behavior, testbenches</div>
-        <ul>
-          <li>Planned module I/Os and supported SPI modes…</li>
-          <li>Instantiated Verilog modules…</li>
-          <li>Implemented 8-bit transfers…</li>
-          <li>Verified timing and logic using GTKWave; debugged with Python Cocotb test logs.</li>
-        </ul>
-      </div>
-    </article>
+      <div class="hint">View Photos</div>
+    </div>
+
+    <div id="gallery-spi" data-title="UWASIC SPI Controller" style="display:none;">
+      <figure data-src="../images/spi_modes.png" data-caption="Simulation of SPI CPOL/CPHA timing."></figure>
+      <figure data-src="../images/spi_waveform.png" data-caption="GTKWave trace verification for MOSI/MISO."></figure>
+      <figure data-src="../images/spi_cocotb.png" data-caption="Cocotb Python logs during PWM testing."></figure>
+    </div>
+  </div>
+
+  <div>
+    <h2>UWASIC — SPI Controller</h2>
+    <div class="meta">Verilog, GTKWave, Cocotb</div>
+    <ul>
+      <li>Implemented SPI controller logic. </li>
+      <li>Performed simulation and waveform verification. </li>
+      <li>Developed Cocotb testbenches for debugging. </li>
+    </ul>
+  </div>
+</article>
+
 
   </main>
 
