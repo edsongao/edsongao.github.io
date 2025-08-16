@@ -35,78 +35,120 @@
   <main class="section container">
 
     <!-- Analog Frontend Breakout Board -->
-    <article class="proj">
-      <div class="figure">
-        <div id="img-afe" class="placeholder">
-          Add later: Portfolio.setProjectImage('img-afe', '../images/afe.jpg', 'Analog Frontend')
-        </div>
+<article class="proj">
+  <div class="figure">
+    <div class="gallery-cover" data-gallery="gallery-afe" data-title="Analog Frontend Breakout Board">
+      <div class="stack">
+        <img src="../images/afe_cover.jpg" alt="Analog Frontend cover">
       </div>
-      <div>
-        <h2>Analog Frontend Breakout Board</h2>
-        <div class="meta">Schematics, layout, testability, I2C test ports</div>
-        <ul>
-          <li>Performed IC selection…</li>
-          <li>Designed DC thermistor biasing…</li>
-          <li>Modified typical application circuits…</li>
-          <li>Added auxiliary circuits…</li>
-          <li>Layout: symmetry, optimized placement, ground integrity, I2C test ports.</li>
-        </ul>
-      </div>
-    </article>
+      <div class="hint">View Photos</div>
+    </div>
+
+    <div id="gallery-afe" data-title="Analog Frontend Breakout Board" style="display:none;">
+      <figure data-src="../images/afe_schematic.png" data-caption="Schematic diagram and IC selection overview."></figure>
+      <figure data-src="../images/afe_biasing.png" data-caption="Thermistor biasing networks for temperature sensing."></figure>
+      <figure data-src="../images/afe_layout.png" data-caption="Symmetric PCB layout with neat routing."></figure>
+      <figure data-src="../images/afe_testpoints.png" data-caption="Extra test points and DNP resistors for flexibility."></figure>
+    </div>
+  </div>
+
+  <div>
+    <h2>Analog Frontend Breakout Board</h2>
+    <div class="meta">Schematics, layout, testability, I2C test ports</div>
+    <ul>
+      <li>Performed IC selection referencing datasheets.</li>
+      <li>Designed thermistor biasing networks.</li>
+      <li>Modified typical application circuits for testability.</li>
+      <li>Added auxiliary circuits with DNP resistors and test points.</li>
+    </ul>
+  </div>
+</article>
+
 
     <!-- Rpi Rev C Assembly -->
-    <article class="proj">
-      <div class="figure">
-        <div id="img-rpi" class="placeholder">
-          Add later: Portfolio.setProjectImage('img-rpi', '../images/rpi-revc.jpg', 'Rpi Rev C assembly')
-        </div>
+  <article class="proj">
+  <div class="figure">
+    <div class="gallery-cover" data-gallery="gallery-rpi" data-title="Rpi Rev C – Assembly & Reflow">
+      <div class="stack">
+        <img src="../images/rpi_cover.jpg" alt="Rpi cover">
       </div>
-      <div>
-        <h2>Rpi Rev C — Assembly & Reflow</h2>
-        <div class="meta">SMD/through-hole soldering, reflow profile control</div>
-        <ul>
-          <li>Soldered ICs, MOSFETs, diodes…</li>
-          <li>Executed reflow with manual temperature profile control…</li>
-        </ul>
-      </div>
-    </article>
+      <div class="hint">View Photos</div>
+    </div>
+
+    <div id="gallery-rpi" data-title="Rpi Rev C – Assembly & Reflow" style="display:none;">
+      <figure data-src="../images/rpi_components.jpg" data-caption="Placed SMD/through-hole components including ICs and passives."></figure>
+      <figure data-src="../images/rpi_reflow.jpg" data-caption="Controlled reflow oven temperature profile."></figure>
+      <figure data-src="../images/rpi_finished.jpg" data-caption="Final inspected board ready for testing."></figure>
+    </div>
+  </div>
+
+  <div>
+    <h2>Rpi Rev C — Assembly & Reflow</h2>
+    <div class="meta">SMD/through-hole soldering, reflow profile control</div>
+    <ul>
+      <li>Soldered ICs, MOSFETs, diodes, op-amps, and passives.</li>
+      <li>Performed reflow using oven and manual temperature adjustment.</li>
+    </ul>
+  </div>
+</article>
+
 
     <!-- ZeroPilot 4.0 -->
-    <article class="proj">
-      <div class="figure">
-        <div id="img-zeropilot" class="placeholder">
-          Add later: Portfolio.setProjectImage('img-zeropilot', '../images/zeropilot.jpg', 'ZeroPilot 4.0')
-        </div>
+ <article class="proj">
+  <div class="figure">
+    <div class="gallery-cover" data-gallery="gallery-zeropilot" data-title="ZeroPilot 4.0 — Power & CAN Integration">
+      <div class="stack">
+        <img src="../images/zeropilot_cover.jpg" alt="ZeroPilot cover">
       </div>
-      <div>
-        <h2>ZeroPilot 4.0 — Power & CAN Integration</h2>
-        <div class="meta">Impedance matching, AC termination, cost-optimized protection</div>
-        <ul>
-          <li>Ported CAN circuitry…</li>
-          <li>Selected alternative ESC protection components…</li>
-          <li>Created custom CAN-transceiver footprint…</li>
-        </ul>
-      </div>
-    </article>
+      <div class="hint">View Photos</div>
+    </div>
+
+    <div id="gallery-zeropilot" data-title="ZeroPilot 4.0 — Power & CAN Integration" style="display:none;">
+      <figure data-src="../images/zeropilot_can.png" data-caption="CAN circuitry routing with impedance matching."></figure>
+      <figure data-src="../images/zeropilot_termination.png" data-caption="AC termination and bypass capacitor placement."></figure>
+      <figure data-src="../images/zeropilot_footprint.png" data-caption="Custom footprint in Altium with 3D simulation."></figure>
+    </div>
+  </div>
+
+  <div>
+    <h2>ZeroPilot 4.0 — Power & CAN Integration</h2>
+    <div class="meta">Impedance matching, AC termination, cost optimization</div>
+    <ul>
+      <li>Implemented proper AC terminations and bypass capacitors.</li>
+      <li>Ported CAN circuitry with correct impedance routing.</li>
+      <li>Created custom CAN footprint with 3D verification.</li>
+    </ul>
+  </div>
+</article>
+
 
     <!-- Single Servo Board Validation -->
-    <article class="proj">
-      <div class="figure">
-        <div id="img-servo" class="placeholder">
-          Add later: Portfolio.setProjectImage('img-servo', '../images/single-servo.jpg', 'Single Servo validation')
-        </div>
+ <article class="proj">
+  <div class="figure">
+    <div class="gallery-cover" data-gallery="gallery-servo" data-title="Single Servo — Power Validation & Transients">
+      <div class="stack">
+        <img src="../images/servo_cover.jpg" alt="Single Servo cover">
       </div>
-      <div>
-        <h2>Single Servo — Power Validation & Transients</h2>
-        <div class="meta">Buck converter load testing, oscilloscopes, DMMs</div>
-        <ul>
-          <li>Probed buck regulator outputs…</li>
-          <li>Performed assembly checks…</li>
-          <li>Verified power paths…</li>
-          <li>Conducted E-load tests…</li>
-        </ul>
-      </div>
-    </article>
+      <div class="hint">View Photos</div>
+    </div>
+
+    <div id="gallery-servo" data-title="Single Servo — Power Validation & Transients" style="display:none;">
+      <figure data-src="../images/servo_probe.jpg" data-caption="Oscilloscope probing the buck converter."></figure>
+      <figure data-src="../images/servo_dmm.jpg" data-caption="DMM measurements across step inputs."></figure>
+      <figure data-src="../images/servo_eload.jpg" data-caption="Electronic load transient testing."></figure>
+    </div>
+  </div>
+
+  <div>
+    <h2>Single Servo — Power Validation & Transients</h2>
+    <div class="meta">Buck converters, oscilloscopes, electronic load</div>
+    <ul>
+      <li>Used DMMs and E-loads to test converter response.</li>
+      <li>Verified transient stability on oscilloscope traces.</li>
+    </ul>
+  </div>
+</article>
+
 
   </main>
 
