@@ -14,7 +14,7 @@ function setProjectImage(id, src, alt) {
 const el = document.getElementById(id);
 if (!el) return;
 if (src) {
-el.outerHTML = <img src="${src}" alt="${alt || 'project image'}">;
+el.outerHTML = '<img src="' + src + '" alt="' + (alt || 'project image') + '">';
 }
 }
 
