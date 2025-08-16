@@ -35,34 +35,32 @@
   <main class="section container">
 
     <!-- Factory IO Projects -->
-    <article class="proj">
-      <div class="figure">
-        <div id="img-factoryio" class="placeholder">
-          Add later: Portfolio.setProjectImage('img-factoryio', '../images/factory-io.jpg', 'Factory IO')
-        </div>
+  <article class="proj">
+  <div class="figure">
+    <div class="gallery-cover" data-gallery="gallery-factoryio" data-title="Factory I/O — PLC Lines & Control">
+      <div class="stack">
+        <img src="../images/factoryio_cover.jpg" alt="Factory IO cover">
       </div>
+      <div class="hint">View Photos</div>
+    </div>
 
-      <div>
-        <h2>Factory I/O — PLC Lines and Control</h2>
-        <div class="meta">
-          Siemens TIA V18, PLCSIM S7-1200/1500, SCL, Ladder, PID
-        </div>
-        <ul>
-          <li>
-            Built an FSM with state transitions in SCL within a function block
-            to drive a 2-axis pick-and-place line.
-          </li>
-          <li>
-            Programmed E-stop and manual start/stop circuits in ladder logic
-            for safety and control.
-          </li>
-          <li>
-            Used PID blocks to stabilize liquid level using pretuning and
-            fine-tuning in the portal.
-          </li>
-        </ul>
-      </div>
-    </article>
+    <div id="gallery-factoryio" data-title="Factory I/O — PLC Lines & Control" style="display:none;">
+      <figure data-src="../images/factoryio_fsm.png" data-caption="FSM and state transitions coded in SCL."></figure>
+      <figure data-src="../images/factoryio_ladder.png" data-caption="Ladder logic safety circuits for E-stop."></figure>
+      <figure data-src="../images/factoryio_pid.png" data-caption="PID tuning for tank level stabilization."></figure>
+    </div>
+  </div>
+
+  <div>
+    <h2>Factory I/O — PLC Lines & Control</h2>
+    <div class="meta">Siemens TIA, Ladder Logic, PID tuning</div>
+    <ul>
+      <li>Implemented a 2-axis robotic pick-and-place with FSM in SCL.</li>
+      <li>Added safety logic with ladder programming for E-stop.</li>
+      <li>Used PID blocks for tank level stabilization.</li>
+    </ul>
+  </div>
+</article>
 
   </main>
 
