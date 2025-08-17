@@ -35,29 +35,66 @@
   <main class="section container">
 
     <!-- Factory IO Projects -->
-  <article class="proj">
+ <!-- Project 1: 2-Axis Pick-and-Place FSM (SCL) -->
+<article class="proj">
   <div class="figure">
-    <div class="gallery-cover" data-gallery="gallery-factoryio" data-title="Factory I/O — PLC Lines & Control">
+    <!-- Clickable cover for future gallery (optional). Replace the src when you add images. -->
+    <div class="gallery-cover" data-gallery="gallery-fsm" data-title="2‑Axis Pick-and-Place — FSM in SCL">
       <div class="stack">
-        <img src="../images/factoryio_cover.jpg" alt="Factory IO cover">
+        <img src="../images/automation-fsm-cover.jpg" alt="2‑Axis Pick-and-Place cover">
       </div>
       <div class="hint">View Photos</div>
     </div>
 
-    <div id="gallery-factoryio" data-title="Factory I/O — PLC Lines & Control" style="display:none;">
-      <figure data-src="../images/factoryio_fsm.png" data-caption="FSM and state transitions coded in SCL."></figure>
-      <figure data-src="../images/factoryio_ladder.png" data-caption="Ladder logic safety circuits for E-stop."></figure>
-      <figure data-src="../images/factoryio_pid.png" data-caption="PID tuning for tank level stabilization."></figure>
+    <!-- Hidden gallery data (add <figure> entries later) -->
+    <div id="gallery-fsm" data-title="2‑Axis Pick-and-Place — FSM in SCL" style="display:none;">
+      <!-- Example placeholders:
+      <figure data-src="../images/fsm_overview.png" data-caption="Cell overview and I/O mapping."></figure>
+      <figure data-src="../images/fsm_scl.png" data-caption="SCL FSM and state transitions."></figure>
+      <figure data-src="../images/fsm_sequence.png" data-caption="Sequencer timing and handshakes."></figure>
+      -->
     </div>
   </div>
 
   <div>
-    <h2>Factory I/O — PLC Lines & Control</h2>
-    <div class="meta">Siemens TIA, Ladder Logic, PID tuning</div>
+    <h2>2‑Axis Pick‑and‑Place — FSM in SCL</h2>
+    <div class="meta">SCL FSM, function blocks, interlocks, ladder safety</div>
     <ul>
-      <li>Implemented a 2-axis robotic pick-and-place with FSM in SCL.</li>
-      <li>Added safety logic with ladder programming for E-stop.</li>
-      <li>Used PID blocks for tank level stabilization.</li>
+      <li>Implemented an FSM in SCL within a function block to sequence a 2‑axis pick‑and‑place cell.</li>
+      <li>Defined clear state transitions, handshakes, and permissives across axes and actuators.</li>
+      <li>Added ladder logic for E‑stop and manual start/stop to meet safety and operational needs.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- Project 2: PID Tank Level Control -->
+<article class="proj">
+  <div class="figure">
+    <!-- Clickable cover for future gallery (optional). Replace the src when you add images. -->
+    <div class="gallery-cover" data-gallery="gallery-pid" data-title="PID Tank Level Control">
+      <div class="stack">
+        <img src="../images/automation-pid-cover.jpg" alt="PID Tank Level cover">
+      </div>
+      <div class="hint">View Photos</div>
+    </div>
+
+    <!-- Hidden gallery data (add <figure> entries later) -->
+    <div id="gallery-pid" data-title="PID Tank Level Control" style="display:none;">
+      <!-- Example placeholders:
+      <figure data-src="../images/pid_pretune.png" data-caption="Pretune result and initial response."></figure>
+      <figure data-src="../images/pid_finetune.png" data-caption="Fine‑tuning around operating point."></figure>
+      <figure data-src="../images/pid_trend.png" data-caption="Level trend showing stability and settling time."></figure>
+      -->
+    </div>
+  </div>
+
+  <div>
+    <h2>PID Tank Level Control</h2>
+    <div class="meta">PID blocks, pretuning, fine‑tuning, trend validation</div>
+    <ul>
+      <li>Configured PID controller blocks to stabilize tank level against disturbances and setpoint changes.</li>
+      <li>Used pretuning for initial gains, followed by fine‑tuning under process conditions.</li>
+      <li>Validated stability, overshoot, and settling time via HMI/trend monitoring.</li>
     </ul>
   </div>
 </article>
