@@ -12,42 +12,38 @@
   <script src="../assets/script.js" defer></script>
 
   <style>
-body {
-  /* Set PCB lab background at the very bottom */
-  background-image: url('../images/pcb-background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom;
-  background-attachment: fixed;
-}
-
-/* Only actual cards should be white, NOT the surrounding container */
-.header,
-.page-header,
-.footer,
-.proj {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(16, 36, 55, 0.08);
-  position: relative;
-  z-index: 1;
-}
-
-/* Remove white background from main container—just spacing! */
-.section.container {
-  margin-top: 36px;
-  margin-bottom: 36px;
-  padding: 26px;
-  background: none !important;
-  box-shadow: none !important;
-}
-
-/* Prevent project card shadows from being hidden by parent overflow */
-main, .section.container {
-  background: none !important;
-  box-shadow: none !important;
-  overflow: visible !important;
-}
+        body {
+        background-image: url('../images/pcb-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        background-attachment: fixed;
+      }
+      
+      .header,
+      .page-header,
+      .footer,
+      .proj {
+        background: #fff !important;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(16,36,55,0.08);
+        position: relative;
+        z-index: 1;
+      }
+      
+      .section.container {
+        margin-top: 36px;
+        margin-bottom: 36px;
+        padding: 26px;
+        background: none !important;
+        box-shadow: none !important;
+      }
+      
+      main, .section.container {
+        background: none !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+      }
 
 
 </style>
