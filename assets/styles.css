@@ -92,7 +92,7 @@ display: flex; align-items: center; justify-content: center; color: #64748b; bac
   display: grid;
   grid-template-rows: 1fr auto;
   gap: 8px;
-  align-items: end;
+  align-items: center;
   /* Ensures figure never overflows modal vertically */
   overflow: hidden;
 }
