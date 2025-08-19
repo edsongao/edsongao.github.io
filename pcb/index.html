@@ -10,6 +10,45 @@
 
   <!-- Scripts -->
   <script src="../assets/script.js" defer></script>
+
+  <style>
+body {
+  /* Set PCB lab background at the very bottom */
+  background-image: url('../images/pcb-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
+/* Keep header, content, and main blocks opaque */
+.header,
+.page-header,
+.section.container,
+.footer {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(16, 36, 55, 0.08);
+  position: relative;
+  z-index: 1;
+}
+/* Space the main container slightly from the page edge */
+.section.container {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  padding: 26px;
+}
+
+/* Optional: slightly transparent white, if you want a hint of background through the blocks:
+background: rgba(255,255,255,0.93);
+*/
+
+/* Prevent project card shadows from being hidden by parent overflow */
+main, .section.container {
+  overflow: visible !important;
+}
+</style>
+
 </head>
 <body>
 
