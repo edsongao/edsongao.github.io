@@ -1,7 +1,7 @@
 /* Basic reset */
 
 { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: #0f172a; background: #ffffff; }
+html, body { font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: #0f172a; background: #ffffff; }
 
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; height: auto; display: block; }
