@@ -39,16 +39,15 @@
   <div class="figure">
     <div class="gallery-cover" data-gallery="gallery-afe" data-title="Analog Frontend Breakout Board">
       <div class="stack">
-        <img src="../images/afe_cover.jpg" alt="Analog Frontend cover">
+        <img src="../images/afe_finished-board.png" alt="Analog Frontend cover">
       </div>
       <div class="hint">View Photos</div>
     </div>
 
     <div id="gallery-afe" data-title="Analog Frontend Breakout Board" style="display:none;">
-      <figure data-src="../images/afe_schematic.png" data-caption="Schematic diagram and IC selection overview."></figure>
-      <figure data-src="../images/afe_biasing.png" data-caption="Thermistor biasing networks for temperature sensing."></figure>
-      <figure data-src="../images/afe_layout.png" data-caption="Symmetric PCB layout with neat routing."></figure>
-      <figure data-src="../images/afe_testpoints.png" data-caption="Extra test points and DNP resistors for flexibility."></figure>
+      <figure data-src="../images/afe_schematic.png" data-caption="Schematic diagram and IC. Consulted original datasheet for typical implementation circuits for each pin."></figure>
+      <figure data-src="../images/afe_pcb.png" data-caption="PCB layout with neat routing. Symmetric placement for derivative circuits (RC, Current Sense)"></figure>
+      <figure data-src="../images/afe_finished-board.png" data-caption="Extra test points and DNP resistors for flexibility."></figure>
     </div>
   </div>
 
@@ -76,9 +75,9 @@
     </div>
 
     <div id="gallery-rpi" data-title="Rpi Rev C – Assembly & Reflow" style="display:none;">
-      <figure data-src="../images/rpi_components.jpg" data-caption="Placed SMD/through-hole components including ICs and passives."></figure>
-      <figure data-src="../images/rpi_reflow.jpg" data-caption="Controlled reflow oven temperature profile."></figure>
-      <figure data-src="../images/rpi_finished.jpg" data-caption="Final inspected board ready for testing."></figure>
+      <figure data-src="../images/RC-altium-assembler.jpg" data-caption="Placed SMD/through-hole components including ICs and passives, with the help of altium assembler"></figure>
+      <figure data-src="../images/RC-microscope.jpg" data-caption="Inspecting status of components after reflow"></figure>
+      <figure data-src="../images/RC-stencil.jpg" data-caption="Custom Setup using spare PCBs, in order to stabilize the stencil for solder placement"></figure>
     </div>
   </div>
 
@@ -104,9 +103,12 @@
     </div>
 
     <div id="gallery-zeropilot" data-title="ZeroPilot 4.0 — Power & CAN Integration" style="display:none;">
-      <figure data-src="../images/zeropilot_can.png" data-caption="CAN circuitry routing with impedance matching."></figure>
-      <figure data-src="../images/zeropilot_termination.png" data-caption="AC termination and bypass capacitor placement."></figure>
-      <figure data-src="../images/zeropilot_footprint.png" data-caption="Custom footprint in Altium with 3D simulation."></figure>
+
+      <figure data-src="../images/zp-footprint.png" data-caption="Designing the custom footprint, using existing library components and the componenet datasheet as reference"></figure>
+      <figure data-src="../images/zp-schematic.png" data-caption="CAN circuitry routing with impedance matching., with AC termination and bypass capacitor placement."></figure>
+      <figure data-src="../images/zp-symbol-and-bodies.png" data-caption="Custom footprint in Altium with 3D simulation."></figure>
+      <figure data-src="../images/zp-filling-out-forms.png" data-caption="Updating Hardware Component listing for order in Atlassian"></figure>
+      
     </div>
   </div>
 
@@ -133,9 +135,9 @@
     </div>
 
     <div id="gallery-servo" data-title="Single Servo — Power Validation & Transients" style="display:none;">
-      <figure data-src="../images/servo_probe.jpg" data-caption="Oscilloscope probing the buck converter."></figure>
-      <figure data-src="../images/servo_dmm.jpg" data-caption="DMM measurements across step inputs."></figure>
-      <figure data-src="../images/servo_eload.jpg" data-caption="Electronic load transient testing."></figure>
+      <figure data-src="../images/servo-assembly-checks.png" data-caption="The checklist for the board testing"></figure>
+      <figure data-src="../images/servo-e-vs-load.png" data-caption="Theoretical Measurements, made using Excel"></figure>
+      <figure data-src="../images/servo-transient-testing.jpg" data-caption="Electronic load transient testing."></figure>
     </div>
   </div>
 
