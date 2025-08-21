@@ -1,28 +1,148 @@
-<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>About — Edson Gao</title> <!-- Styles --> <link rel="stylesheet" href="assets/styles.css"> <!-- Scripts --> <script src="assets/script.js" defer></script> <style> /* Page-specific layout for About */ .about-wrap { padding: 24px; } .about-card { display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start; border: 1px solid #e5e7eb; background: #fff; border-radius: 14px; box-shadow: 0 8px 24px rgba(16,36,55,0.08); padding: 22px; max-width: 1000px; margin: 0 auto; } .about-portrait { width: 100%; aspect-ratio: 3/4; border-radius: 12px; background: #f1f5f9 url('images/portrait-placeholder.png') center center / cover no-repeat; border: 1px solid #e5e7eb; } /* Optional: if you don’t have a placeholder file yet, use a CSS gradient */ .about-portrait.placeholder { background: linear-gradient(135deg, #e2e8f0, #f8fafc); display: grid; place-items: center; color: #64748b; font-weight: 700; } .about-body h2 { font-size: 26px; margin: 0 0 8px 0; font-weight: 800; } .about-body .meta { font-size: 14px; opacity: 0.7; margin-bottom: 12px; } .about-body p { line-height: 1.6; margin-bottom: 14px; } .about-body ul { margin: 10px 0 0 18px; } .about-body li { margin-bottom: 6px; } @media (max-width: 720px) { .about-card { grid-template-columns: 1fr; } .about-portrait { max-width: 320px; margin: 0 auto; } } </style> </head> <body> <!-- Header --> <header class="header container"> <div style="font-weight:800;"> <a href="index.html">Edson Gao</a> </div> <nav class="nav"> <a href="projects.html">My Projects</a> <a href="about.html">About</a> </nav> </header> <!-- Page Header --> <div class="page-header container"> <h1 class="page-title">About Me</h1> <p class="page-subtitle">Electrical Engineering student — PCB, ASIC, and control systems.</p> </div> <!-- Main Content --> <main class="about-wrap container"> <section class="about-card"> <!-- Portrait on the left --> <div class="about-portrait placeholder"> Portrait </div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Edson Gao</title>
 
-    <!-- Text on the right -->
-  <div class="about-body">
-    <h2>Hi, I’m Edson</h2>
-    <div class="meta">University of Waterloo -  Electrical Engineering -  Class of 2028</div>
-    <p>
-      I design and validate electronics across analog front-ends, embedded interfaces, and power systems.
-      I’m working toward advanced hardware architecture and neurocomputing in upper years, and aim to pursue
-      graduate studies at MIT or Caltech. My project experience spans PCB design, ASIC verification, and
-      industrial automation with PLCs.
-    </p>
-    <p>
-      Tools I’m comfortable with include Altium Designer, MATLAB, and GTKWave, plus Python-based verification
-      via cocotb. I enjoy building drones, music production, and tackling signal integrity and control problems.
-    </p>
-    <ul>
-      <li>Focus: PCB layout, ASIC interfaces (SPI), control systems</li>
-      <li>Interests: RISC‑V, neurocomputing, hardware‑software co‑design</li>
-      <li>Clubs: WARG (Waterloo Aerial Robotics Group)</li>
-    </ul>
-  </div>
-</section>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/styles.css" />
 
+    <!-- Scripts -->
+    <script src="assets/script.js" defer></script>
 
-  </main> <!-- Footer --> <footer class="footer container"> © <span id="year"></span> Edson Gao </footer> <script> document.getElementById('year').textContent = new Date().getFullYear(); </script> </body> </html>
+    <style>
+      /* Page-specific layout for About */
+      .about-wrap {
+        padding: 24px;
+      }
 
+      .about-card {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 24px;
+        align-items: start;
+        border: 1px solid #e5e7eb;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(16, 36, 55, 0.08);
+        padding: 22px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
+      .about-portrait {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        border-radius: 12px;
+        background: #f1f5f9 url("images/portrait-placeholder.png") center center / cover no-repeat;
+        border: 1px solid #e5e7eb;
+      }
+
+      /* Optional: if you don’t have a placeholder file yet, use a CSS gradient */
+      .about-portrait.placeholder {
+        background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+        display: grid;
+        place-items: center;
+        color: #64748b;
+        font-weight: 700;
+      }
+
+      .about-body h2 {
+        font-size: 26px;
+        margin: 0 0 8px 0;
+        font-weight: 800;
+      }
+
+      .about-body .meta {
+        font-size: 14px;
+        opacity: 0.7;
+        margin-bottom: 12px;
+      }
+
+      .about-body p {
+        line-height: 1.6;
+        margin-bottom: 14px;
+      }
+
+      .about-body ul {
+        margin: 10px 0 0 18px;
+      }
+
+      .about-body li {
+        margin-bottom: 6px;
+      }
+
+      @media (max-width: 720px) {
+        .about-card {
+          grid-template-columns: 1fr;
+        }
+
+        .about-portrait {
+          max-width: 320px;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header container">
+      <div style="font-weight: 800;">
+        <a href="index.html">Edson Gao</a>
+      </div>
+      <nav class="nav">
+        <a href="projects.html">My Projects</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header container">
+      <h1 class="page-title">About Me</h1>
+      <p class="page-subtitle">Electrical Engineering student — PCB, ASIC, and control systems.</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="about-wrap container">
+      <section class="about-card">
+        <!-- Portrait on the left -->
+        <div class="about-portrait placeholder">Portrait</div>
+
+        <!-- Text on the right -->
+        <div class="about-body">
+          <h2>Hi, I’m Edson</h2>
+          <div class="meta">University of Waterloo - Electrical Engineering - Class of 2028</div>
+
+          <p>
+            I design and validate electronics across analog front-ends, embedded interfaces, and power systems.
+            I’m working toward advanced hardware architecture and neurocomputing in upper years, and aim to pursue
+            graduate studies at MIT or Caltech. My project experience spans PCB design, ASIC verification, and
+            industrial automation with PLCs.
+          </p>
+
+          <p>
+            Tools I’m comfortable with include Altium Designer, MATLAB, and GTKWave, plus Python-based verification
+            via cocotb. I enjoy building drones, music production, and tackling signal integrity and control problems.
+          </p>
+
+          <ul>
+            <li>Focus: PCB layout, ASIC interfaces (SPI), control systems</li>
+            <li>Interests: RISC‑V, neurocomputing, hardware‑software co‑design</li>
+            <li>Clubs: WARG (Waterloo Aerial Robotics Group)</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer container">
+      © <span id="year"></span> Edson Gao
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
