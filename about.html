@@ -11,24 +11,28 @@
     <!-- Scripts -->
     <script src="assets/script.js" defer></script>
 
-     <style>
-      /* Page-specific layout for About */
+    <!-- Page-specific styles safely namespaced to avoid header/nav impact -->
+    <style>
+      /* About page layout container (does not touch header) */
       .about-wrap {
         padding: 24px;
+        max-width: 1000px;
+        margin: 0 auto;
       }
 
+      /* Main About card */
       .about-card {
         display: grid;
         grid-template-columns: 260px 1fr;
         gap: 24px;
         align-items: start;
+
+        /* Card look contained to content only */
         border: 1px solid #e5e7eb;
         background: #fff;
         border-radius: 14px;
         box-shadow: 0 8px 24px rgba(16, 36, 55, 0.08);
         padding: 22px;
-        max-width: 1000px;
-        margin: 0 auto;
       }
 
       .about-portrait {
@@ -39,7 +43,6 @@
         border: 1px solid #e5e7eb;
       }
 
-      /* Optional: if you don’t have a placeholder file yet, use a CSS gradient */
       .about-portrait.placeholder {
         background: linear-gradient(135deg, #e2e8f0, #f8fafc);
         display: grid;
@@ -48,7 +51,7 @@
         font-weight: 700;
       }
 
-      .about-body h2 {
+      .about-body .about-title {
         font-size: 26px;
         margin: 0 0 8px 0;
         font-weight: 800;
@@ -73,43 +76,35 @@
         margin-bottom: 6px;
       }
 
-      @media (max-width: 720px) {
-        .about-card {
-          grid-template-columns: 1fr;
-        }
-
-        .about-portrait {
-          max-width: 320px;
-          margin: 0 auto;
-        }
-      }
-      /* Upcoming Projects card */
+      /* Upcoming Projects card within About page */
       .upcoming-card {
         display: grid;
         grid-template-columns: 1fr;
         gap: 16px;
         align-items: start;
+
         border: 1px solid #e5e7eb;
         background: #fff;
         border-radius: 14px;
-        box-shadow: 0 8px 24px rgba(16,36,55,0.08);
+        box-shadow: 0 8px 24px rgba(16, 36, 55, 0.08);
         padding: 22px;
+
         max-width: 1000px;
         margin: 24px auto 0 auto;
       }
-      
-      .upcoming-card h2 {
+
+      .upcoming-card .upcoming-title {
         font-size: 22px;
         margin: 0;
         font-weight: 800;
       }
-      
+
       .project-list {
         display: grid;
         grid-template-columns: 1fr;
         gap: 12px;
       }
-      
+
       .project-item {
         display: grid;
         grid-template-columns: 1fr auto;
@@ -120,17 +115,17 @@
         border-radius: 12px;
         padding: 14px;
       }
-      
+
       .project-title {
         font-weight: 700;
         margin: 0 0 6px 0;
       }
-      
+
       .project-meta {
         font-size: 13px;
         opacity: 0.75;
       }
-      
+
       .project-badge {
         align-self: start;
         padding: 6px 10px;
@@ -141,8 +136,15 @@
         background: #e2e8f0;
         border: 1px solid #cbd5e1;
       }
-      
+
       @media (max-width: 720px) {
+        .about-card {
+          grid-template-columns: 1fr;
+        }
+        .about-portrait {
+          max-width: 320px;
+          margin: 0 auto;
+        }
         .upcoming-card {
           margin-top: 18px;
         }
@@ -153,7 +155,6 @@
           justify-self: start;
         }
       }
-
     </style>
 
   </head>
