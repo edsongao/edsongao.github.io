@@ -18,7 +18,7 @@
   }
 
   .about-card {
-    display: grid;
+    display: block;
     grid-template-columns: 260px 1fr;
     gap: 24px;
     align-items: start;
@@ -32,12 +32,18 @@
   }
 
   .about-portrait {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    border-radius: 12px;
-    background: #f1f5f9 url("images/portrait-placeholder.png") center center / cover no-repeat;
-    border: 1px solid #e5e7eb;
-  }
+  float: left;
+  width: 260px;              /* similar to your previous column width */
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  background: #f1f5f9 url("images/portrait-placeholder.png") center center / cover no-repeat;
+  border: 1px solid #e5e7eb;
+
+  /* Create the wrapping shape */
+  shape-outside: inset(0 round 12px); /* approximates the rounded rectangle */
+  -webkit-shape-outside: inset(0 round 12px); /* Safari */
+  margin: 0 20px 16px 0;     /* space to the right and bottom */
+}
 
   .about-portrait.placeholder {
     background: linear-gradient(135deg, #e2e8f0, #f8fafc);
@@ -54,6 +60,7 @@
   }
 
   .about-body .meta {
+    overflow: hidden; /* establishes a new block formatting context to clear margins nicely */
     font-size: 14px;
     opacity: 0.7;
     margin-bottom: 12px;
