@@ -13,6 +13,30 @@
 </head>
 <body>
 
+  <!-- Video Stuff -->
+  <style>
+      .video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000; /* optional for letterboxing */
+    margin-top: 12px; /* spacing from cover */
+  }
+  
+  .video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+  }
+
+  </style>
+
   <!-- Header -->
   <header class="header">
     <div style="font-weight:800;">
@@ -35,10 +59,9 @@
   <main class="section container">
 
     <!-- Factory IO Projects -->
- <!-- Project 1: 2-Axis Pick-and-Place FSM (SCL) -->
 <article class="proj">
   <div class="figure">
-    <!-- Clickable cover for future gallery (optional). Replace the src when you add images. -->
+    <!-- Clickable cover for future gallery -->
     <div class="gallery-cover" data-gallery="gallery-fsm" data-title="2‑Axis Pick-and-Place — FSM in SCL">
       <div class="stack">
         <img src="../images/automation-fsm-cover.jpg" alt="2‑Axis Pick-and-Place cover">
@@ -46,13 +69,22 @@
       <div class="hint">View Photos</div>
     </div>
 
-    <!-- Hidden gallery data (add <figure> entries later) -->
+    <!-- Responsive YouTube embed -->
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/watch?v=ENqzzy9zysE"
+        title="2‑Axis Pick‑and‑Place — Demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- Hidden gallery data -->
     <div id="gallery-fsm" data-title="2‑Axis Pick-and-Place — FSM in SCL" style="display:none;">
-      
       <figure data-src="../images/fsm_overview.png" data-caption="Cell overview and I/O mapping."></figure>
       <figure data-src="../images/fsm_scl.png" data-caption="SCL FSM and state transitions."></figure>
       <figure data-src="../images/fsm_sequence.png" data-caption="Sequencer timing and handshakes."></figure>
-      
     </div>
   </div>
 
@@ -66,6 +98,7 @@
     </ul>
   </div>
 </article>
+
 
 <!-- Project 2: PID Tank Level Control -->
 <article class="proj">
