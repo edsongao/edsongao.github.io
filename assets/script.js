@@ -162,81 +162,90 @@ window.Portfolio.setProjectImage = setProjectImage;
     coverEl.addEventListener('click', () => open(items, title, 0));
   };
 
-  /* --- Gallery image click-to-zoom --- */
-(function() {
-const ZOOM_SCALE = 2.2; // how much to zoom
-const ZOOM_MOBILE = 1.6; // gentler zoom on small screens
-let img, frame, zoomed = false;
+/* --- Gallery image click-to-zoom --- */
+(function () {
+  const ZOOM_SCALE = 2.2;      // desktop zoom
+  const ZOOM_MOBILE = 1.6;     // smaller zoom on small screens
+  let img, frame, zoomed = false;
 
-function getScale() {
-return (window.matchMedia && window.matchMedia('(max-width: 720px)').matches)
-? ZOOM_MOBILE
-: ZOOM_SCALE;
-}
+  function getScale() {
+    return (window.matchMedia && window.matchMedia('(max-width: 720px)').matches)
+      ? ZOOM_MOBILE
+      : ZOOM_SCALE;
+  }
 
-function ensureRefs() {
-img = document.getElementById('gallery-image');
-frame = img ? img.closest('.gallery-figure') : null;
-return img && frame;
-}
+  function ensureRefs() {
+    img = document.getElementById('gallery-image');
+    frame = img ? img.closest('.gallery-figure') : null;
+    return !!(img && frame);
+  }
 
-function onMove(e) {
-if (!zoomed || !img || !frame) return;
-const rect = frame.getBoundingClientRect();
-const x = ('touches' in e ? e.touches.clientX : e.clientX) - rect.left;
-const y = ('touches' in e ? e.touches.clientY : e.clientY) - rect.top;
-const px = Math.max(0, Math.min(1, x / rect.width));
-const py = Math.max(0, Math.min(1, y / rect.height));
-img.style.transformOrigin = ${(px*100).toFixed(2)}% ${(py*100).toFixed(2)}%;
-}
+  function getPointerPos(e, rect) {
+    if (e.touches && e.touches.length) {
+      const t = e.touches;
+      return { x: t.clientX - rect.left, y: t.clientY - rect.top };
+    }
+    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  }
 
-function toggleZoom(e) {
-if (!ensureRefs()) return;
-zoomed = !zoomed;
-if (zoomed) {
-img.classList.add('zoomed');
-img.style.transform = scale(${getScale()});
-// Set origin at click/press position immediately
-onMove(e);
-frame.addEventListener('mousemove', onMove);
-frame.addEventListener('touchmove', onMove, { passive: true });
-} else {
-img.classList.remove('zoomed');
-img.style.transform = '';
-img.style.transformOrigin = '';
-frame.removeEventListener('mousemove', onMove);
-frame.removeEventListener('touchmove', onMove);
-}
-}
+  function onMove(e) {
+    if (!zoomed || !img || !frame) return;
+    const rect = frame.getBoundingClientRect();
+    const { x, y } = getPointerPos(e, rect);
+    const px = Math.max(0, Math.min(1, x / rect.width));
+    const py = Math.max(0, Math.min(1, y / rect.height));
+    img.style.transformOrigin = `${(px * 100).toFixed(2)}% ${(py * 100).toFixed(2)}%`;
+  }
 
-// Click (or tap) to toggle zoom
-document.addEventListener('click', function(e) {
-const target = e.target;
-if (target && target.id === 'gallery-image') {
-toggleZoom(e);
-} else if (zoomed) {
-// Clicking outside the image while zoomed exits zoom
-toggleZoom(e);
-}
-});
+  function toggleZoom(e) {
+    if (!ensureRefs()) return;
+    zoomed = !zoomed;
+    if (zoomed) {
+      img.classList.add('zoomed');
+      img.style.transform = `scale(${getScale()})`;
+      // set origin immediately at click/touch position
+      onMove(e);
+      frame.addEventListener('mousemove', onMove);
+      frame.addEventListener('touchmove', onMove, { passive: true });
+    } else {
+      img.classList.remove('zoomed');
+      img.style.transform = '';
+      img.style.transformOrigin = '';
+      frame.removeEventListener('mousemove', onMove);
+      frame.removeEventListener('touchmove', onMove);
+    }
+  }
 
-// Also allow Escape to exit zoom
-document.addEventListener('keydown', function(e) {
-if (zoomed && e.key === 'Escape') toggleZoom(e);
-});
+  // Click (or tap) to toggle zoom
+  document.addEventListener('click', function (e) {
+    const target = e.target;
+    if (target && target.id === 'gallery-image') {
+      toggleZoom(e);
+    } else if (zoomed) {
+      // clicking outside the image while zoomed exits zoom
+      toggleZoom(e);
+    }
+  });
 
-// Reset zoom whenever a new image is rendered by the gallery
-// Hook into your existing render cycle if possible; otherwise observe src changes
-const obs = new MutationObserver(() => {
-if (!img) return;
-zoomed = false;
-img.classList.remove('zoomed');
-img.style.transform = '';
-img.style.transformOrigin = '';
-});
-window.addEventListener('DOMContentLoaded', () => {
-ensureRefs();
-if (img) obs.observe(img, { attributes: true, attributeFilter: ['src'] });
-});
+  // Esc exits zoom
+  document.addEventListener('keydown', function (e) {
+    if (zoomed && e.key === 'Escape') toggleZoom(e);
+  });
+
+  // Reset zoom whenever a new image is rendered (watch src changes)
+  const obs = new MutationObserver(() => {
+    if (!img) return;
+    zoomed = false;
+    img.classList.remove('zoomed');
+    img.style.transform = '';
+    img.style.transformOrigin = '';
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    ensureRefs();
+    if (img) obs.observe(img, { attributes: true, attributeFilter: ['src'] });
+  });
+})();
+
   
 })();
